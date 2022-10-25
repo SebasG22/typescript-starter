@@ -1,0 +1,21 @@
+type Song {
+    id: Int!
+    name: String
+    album: Album
+}
+
+type Album {
+    id: Int!
+    name: String
+    year: String
+}
+
+type Query {
+    allSongs: [Song]
+    allAlbums: [Album]
+}
+
+type Mutation {
+    addSong(name: String, albumId: Int): Song
+    addAlbum(name: String, year: String): Album
+}
